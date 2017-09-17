@@ -16,7 +16,12 @@ import { FutureComponent } from './Components/future/future.component';
 import { MultipleComponent } from './Components/multiple/multiple.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent}
+  { path: '', component: HomeComponent },
+  { path: 'churning', component: ChurningComponent },
+  { path: 'inactive', component: InactiveComponent },
+  { path: 'cancelled', component: CancelledComponent },
+  { path: 'future', component: FutureComponent },
+  { path: 'multiple', component: MultipleComponent },
 ]
 
 @NgModule({
