@@ -1,7 +1,14 @@
 <div class="list-group leftNav">
-    <a [routerLink]="['/churning']" class="list-group-item">PNR Churning Report</a>
+    <a [routerLink]="['/churning']" class="list-group-item" (click)="onChurningHttpAction()">PNR Churning Report</a>
     <a [routerLink]="['/inactive']" class="list-group-item">Inactive Booking Report</a>
     <a [routerLink]="['/cancelled']" class="list-group-item">Bookings Cancelled</a>
     <a [routerLink]="['/future']" class="list-group-item">Future Bookings</a>
     <a [routerLink]="['/multiple']" class="list-group-item">Multiple PNR Report</a>
 </div>
+
+<!--
+    (click)="onInactiveHttpAction()"
+    (click)="onCancelledHttpAction()"
+    (click)="onFutureHttpAction()"
+    (click)="onMultipleHttpAction()"
+-->

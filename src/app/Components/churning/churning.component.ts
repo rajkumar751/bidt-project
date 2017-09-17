@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../../Services/auth.service";
 
 @Component({
   selector: 'app-churning',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChurningComponent implements OnInit {
 
-  constructor() { }
+  churnData;
+
+  constructor(private _authServ: AuthService) { }
 
   ngOnInit() {
+    this._authServ.onChurningHttpAction()
+        .subscribe(res => this.churnData = res);
   }
+  
 
 }

@@ -15,6 +15,8 @@ import { CancelledComponent } from './Components/cancelled/cancelled.component';
 import { FutureComponent } from './Components/future/future.component';
 import { MultipleComponent } from './Components/multiple/multiple.component';
 
+import { AuthService } from './Services/auth.service';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'churning', component: ChurningComponent },
@@ -43,7 +45,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
